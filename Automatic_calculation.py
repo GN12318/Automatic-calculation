@@ -63,6 +63,7 @@ for file in files:
             lwave = False, 
             lcharg = False,
             gamma = True,
+	    xc = 'PBE',
             kpts = kps,
             directory = mydir) 
     
@@ -70,5 +71,4 @@ for file in files:
     atoms.get_potential_energy()
     
     print(atoms.get_potential_energy())
-    shutil.copy('/public3/home/scg5072/221001/OUTCAR','/public3/home/scg5072/workdir/ALSI/OOUT/')
     os.rename('/public3/home/scg5072/workdir/ALSI/OOUT/' + 'OUTCAR', '/public3/home/scg5072/workdir/ALSI/OOUT/' + f"{file}.out")
